@@ -14,7 +14,20 @@ function calculateTax(income, expenses) {
 
 }
 
+function sendNotification(email) {
 
+    if (!email.includes('@')) {
+        return "Invalid Email";
+    }
+
+    const indexOfAdd = email.indexOf('@');
+    const userName = email.slice(0, indexOfAdd);
+    const domainName = email.slice(indexOfAdd + 1);
+    const message = `${userName} sent you an email from ${domainName}`;
+
+    return message;
+
+}
 
 
 
