@@ -74,6 +74,10 @@ function calculateFinalScore(obj) {
 
 function waitingTime(waitingTimes, serialNumber) {
 
+    if (!Array.isArray(waitingTimes) || typeof serialNumber !== 'number') {
+        return "Invalid Input";
+    }
+
     let totalwaitingTimes = 0;
 
     for (let i of waitingTimes) {
@@ -83,4 +87,4 @@ function waitingTime(waitingTimes, serialNumber) {
     const avgTime = totalwaitingTimes / waitingTimes.length
     console.log(Math.round(avgTime));
 }
-console.log(waitingTime([3, 5, 7, 11, 6], 10));
+console.log(waitingTime([3, 5, 7, 11, 6], '10'));
