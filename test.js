@@ -30,4 +30,24 @@ function sendNotification(email) {
 }
 
 
+function checkDigitsInName(name) {
+
+    if (typeof name !== 'string') {
+        return "Invalid Input"
+    }
+
+    let output = false;
+
+    for (let i of name) {
+
+        if (!isNaN(i)) {
+            output = true;
+            break;
+        }
+
+    }
+
+    return output;
+
+}
 
