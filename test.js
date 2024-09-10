@@ -29,7 +29,6 @@ function sendNotification(email) {
 
 }
 
-
 function checkDigitsInName(name) {
 
     if (typeof name !== 'string') {
@@ -51,3 +50,23 @@ function checkDigitsInName(name) {
 
 }
 
+function calculateFinalScore(obj) {
+
+    if (typeof obj !== 'object') {
+        return "Invalid Input";
+    }
+
+    let ffScore = 0;
+    if (obj.isFFamily === true) {
+        ffScore = 20;
+    }
+
+    const totalScore = obj.testScore + obj.schoolGrade + ffScore;
+
+    if (totalScore >= 80) {
+        return true
+    } else {
+        return false
+    }
+
+}
