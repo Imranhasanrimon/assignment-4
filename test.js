@@ -84,7 +84,10 @@ function waitingTime(waitingTimes, serialNumber) {
         totalwaitingTimes += i;
     }
 
-    const avgTime = totalwaitingTimes / waitingTimes.length
-    console.log(Math.round(avgTime));
+    const avgTime = Math.round(totalwaitingTimes / waitingTimes.length);
+    const mySerial = serialNumber - 1;
+    const remainingCandidate = mySerial - waitingTimes.length
+    const requiredTime = avgTime * remainingCandidate;
+
+    return requiredTime;
 }
-console.log(waitingTime([3, 5, 7, 11, 6], '10'));
