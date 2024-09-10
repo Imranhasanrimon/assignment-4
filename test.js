@@ -70,3 +70,17 @@ function calculateFinalScore(obj) {
     }
 
 }
+
+
+function waitingTime(waitingTimes, serialNumber) {
+
+    let totalwaitingTimes = 0;
+
+    for (let i of waitingTimes) {
+        totalwaitingTimes += i;
+    }
+
+    const avgTime = totalwaitingTimes / waitingTimes.length
+    console.log(Math.round(avgTime));
+}
+console.log(waitingTime([3, 5, 7, 11, 6], 10));
