@@ -1,22 +1,26 @@
 function calculateTax(income, expenses) {
 
-    if (income < 0 || expenses < 0) {
+    if (income < 0 || expenses < 0 || income < expenses) {
         return "Invalid Input";
     }
 
     const netIncome = income - expenses;
     const tax = netIncome * .20;
 
-    if (tax < 0) {
-        return "Invalid Input";
-    }
     return tax;
 
 }
 
 function sendNotification(email) {
+    let count = 0;
 
-    if (!email.includes('@')) {
+    for (let i of email) {
+        if (i === '@') {
+            count++;
+        }
+    }
+
+    if (!email.includes('@') || count > 1) {
         return "Invalid Email";
     }
 
@@ -52,7 +56,7 @@ function checkDigitsInName(name) {
 
 function calculateFinalScore(obj) {
 
-    if (typeof obj !== 'object') {
+    if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
         return "Invalid Input";
     }
 
@@ -71,10 +75,9 @@ function calculateFinalScore(obj) {
 
 }
 
-
 function waitingTime(waitingTimes, serialNumber) {
 
-    if (!Array.isArray(waitingTimes) || typeof serialNumber !== 'number') {
+    if (!Array.isArray(waitingTimes) || typeof serialNumber !== 'number' || waitingTimes.length <= 0) {
         return "Invalid Input";
     }
 
@@ -91,3 +94,6 @@ function waitingTime(waitingTimes, serialNumber) {
 
     return requiredTime;
 }
+
+
+console.log(waitingTime([7, 8, 3, 4, 5], "9"));
