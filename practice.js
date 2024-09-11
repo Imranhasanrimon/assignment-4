@@ -68,3 +68,24 @@ function spaceRemove(string) {
     return strArr;
 }
 console.log(spaceRemove('imran hasan rimon'));
+
+//average price 
+function findAveragePhonePrice(arr) {
+    let totalPrice = 0;
+    for (let i of arr) {
+        totalPrice += i.price
+    }
+    const avg = totalPrice / arr.length
+    return avg
+}
+
+const phones = [
+    { model: "PhoneA", brand: "Iphone", price: 5000 },
+    { model: "PhoneB", brand: "Samsung", price: 4000 },
+    { model: "PhoneC", brand: "Oppo", price: 6000 },
+    { model: "PhoneD", brand: "Nokia", price: 5000 },
+    { model: "PhoneE", brand: "Iphone", price: 5000 },
+    { model: "PhoneF", brand: "HTC", price: 8000 },
+];
+
+console.log(findAveragePhonePrice(phones));
