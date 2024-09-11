@@ -17,3 +17,24 @@ function waitingTime(waitingTimes, serialNumber) {
 
     return requiredTime;
 }
+
+function calculateFinalScore(obj) {
+
+    if (typeof obj !== 'object' || obj === null || Array.isArray(obj)) {
+        return "Invalid Input";
+    }
+
+    let ffScore = 0;
+    if (obj.isFFamily === true) {
+        ffScore = 20;
+    }
+
+    const totalScore = obj.testScore + obj.schoolGrade + ffScore;
+
+    if (totalScore >= 80) {
+        return true
+    } else {
+        return false
+    }
+
+}
