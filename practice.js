@@ -48,3 +48,16 @@ function todayPayable() {
     return totalCost;
 }
 console.log(todayPayable());
+
+//occurrance of a specific element
+function occurrance(target) {
+    const arr = [20, 30, 20, 50, 40, 60, 50]
+    let count = 0;
+    for (let i of arr) {
+        if (i === target) {
+            count++;
+        }
+    }
+    return count;
+}
+console.log(occurrance(20));
