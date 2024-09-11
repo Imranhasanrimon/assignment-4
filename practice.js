@@ -89,3 +89,7 @@ const phones = [
 ];
 
 console.log(findAveragePhonePrice(phones));
+
+//generating random number
+const randomNum = Math.floor((Math.random() * 10) + 11)
+console.log(randomNum);
