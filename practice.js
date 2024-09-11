@@ -38,3 +38,13 @@ function calculateFinalScore(obj) {
     }
 
 }
+
+// today's payable 
+function todayPayable() {
+    const biriyani = 180;
+    const ghol = 25;
+    const transportationCost = 50;
+    const totalCost = biriyani + ghol + transportationCost;
+    return totalCost;
+}
+console.log(todayPayable());
