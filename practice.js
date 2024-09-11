@@ -61,3 +61,10 @@ function occurrance(target) {
     return count;
 }
 console.log(occurrance(20));
+
+// removing space of a string
+function spaceRemove(string) {
+    const strArr = string.split(' ').join('')
+    return strArr;
+}
+console.log(spaceRemove('imran hasan rimon'));
