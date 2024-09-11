@@ -93,3 +93,25 @@ console.log(findAveragePhonePrice(phones));
 //generating random number
 const randomNum = Math.floor((Math.random() * 10) + 11)
 console.log(randomNum);
+
+function sendNotification(email) {
+    let count = 0;
+
+    for (let i of email) {
+        if (i === '@') {
+            count++;
+        }
+    }
+
+    if (!email.includes('@') || count > 1) {
+        return "Invalid Email";
+    }
+
+    const indexOfAdd = email.indexOf('@');
+    const userName = email.slice(0, indexOfAdd);
+    const domainName = email.slice(indexOfAdd + 1);
+    const message = `${userName} sent you an email from ${domainName}`;
+
+    return message;
+
+}
