@@ -56,3 +56,14 @@ function findOdd(arr) {
     }
 }
 console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]));
+console.log('__________________________');
+//Problem 11
+function middleChar(string) {
+    let midLength = Math.floor(string.length / 2);
+    if (string.length % 2 !== 0) {
+        return string[midLength]
+    } else {
+        return string.substr(midLength - 1, 2)
+    }
+}
+console.log(middleChar('A'));
