@@ -91,7 +91,6 @@ function phoneNum(numArr) {
 }
 console.log(phoneNum([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
 
-console.log('__________________________');
 
 //Problem 14
 function squareDigits(int) {
@@ -105,3 +104,31 @@ function squareDigits(int) {
 
 }
 console.log(squareDigits(3212));
+
+//Problem 15
+function isSquare(int) {
+    // return Math.sqrt(int) % 1 === 0;
+    const sqrt = Math.sqrt(int)
+    return sqrt === Math.floor(sqrt)
+}
+console.log(isSquare(26));
+console.log('__________________________');
+
+//Problem 16
+function highAndLow(stringNum) {
+    const strNumArr = stringNum.split(' ');
+    let highNum = strNumArr[0];
+    let lowNum = strNumArr[0];
+    for (let i of strNumArr) {
+        if (highNum < parseInt(i)) {
+            highNum = i;
+        }
+
+        if (lowNum > parseInt(i)) {
+            lowNum = i;
+        }
+    }
+
+    return `${highNum} ${lowNum}`
+}
+console.log(highAndLow('0 -214 542'));
