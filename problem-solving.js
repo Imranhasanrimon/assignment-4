@@ -67,7 +67,6 @@ function middleChar(string) {
     }
 }
 console.log(middleChar('A'));
-console.log('__________________________');
 
 //Problem 12
 function likes(arr) {
@@ -84,3 +83,25 @@ function likes(arr) {
     }
 }
 console.log(likes(['imran', 'masud', 'nazmul', 'saad', 'taijul']));
+
+//Problem 13
+function phoneNum(numArr) {
+    const formate = `(${numArr.slice(0, 3).join('')}) ${numArr.slice(3, 6).join('')}-${numArr.slice(6).join('')}`
+    return formate;
+}
+console.log(phoneNum([1, 1, 1, 1, 1, 1, 1, 1, 1, 1]));
+
+console.log('__________________________');
+
+//Problem 14
+function squareDigits(int) {
+    const intString = int.toString();
+    let output = '';
+    for (let i of intString) {
+        let square = parseInt(i) ** 2;
+        output += square.toString();
+    }
+    return output
+
+}
+console.log(squareDigits(3212));
