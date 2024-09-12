@@ -36,3 +36,23 @@ function disEmvowel(string) {
     return newString
 }
 console.log(disEmvowel('This website is for losers LOL!'));
+
+//Problem 10
+function findOdd(arr) {
+    let obj = {};
+    for (let i of arr) {
+        if (!obj.hasOwnProperty(i)) {
+            obj[i] = 1;
+        } else {
+            obj[i] += 1;
+        }
+    }
+    console.log(obj);
+
+    for (let prob in obj) {
+        if (obj[prob] % 2 !== 0) {
+            return prob
+        }
+    }
+}
+console.log(findOdd([1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1]));
