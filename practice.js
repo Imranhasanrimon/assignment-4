@@ -176,3 +176,16 @@
 //     return output;
 
 // }
+//Problem 28
+function isIsogram(string) {
+    let newString = '';
+    for (let i of string) {
+        if (newString.includes(i.toLowerCase())) {
+            return false;
+        } else {
+            newString += i;
+        }
+    }
+    return true;
+}
+console.log(isIsogram(''));
