@@ -154,7 +154,6 @@ function spinWords(string) {
 
 console.log(spinWords('This is another test'));
 
-console.log('__________________________');
 
 //Problem 20
 function findShort(text) {
@@ -168,3 +167,18 @@ function findShort(text) {
     return smallestWord.length;
 }
 console.log(findShort('i want to travel the world writing code one day'));
+console.log('__________________________');
+//Problem 21
+function XO(string) {
+    let totali = '';
+    let totalx = '';
+    for (let i of string) {
+        if (i.toLowerCase() === 'o') {
+            totali += i;
+        } else if (i.toLowerCase() === 'x') {
+            totalx += i;
+        }
+    }
+    return totali.length === totalx.length;
+}
+console.log(XO('xo'));
