@@ -112,7 +112,6 @@ function isSquare(int) {
     return sqrt === Math.floor(sqrt)
 }
 console.log(isSquare(26));
-console.log('__________________________');
 
 //Problem 16
 function highAndLow(stringNum) {
@@ -132,3 +131,27 @@ function highAndLow(stringNum) {
     return `${highNum} ${lowNum}`
 }
 console.log(highAndLow('0 -214 542'));
+
+console.log('__________________________');
+
+//Problem 19
+function spinWords(string) {
+    const strArr = string.split(' ');
+    const newArr = [];
+    for (let i of strArr) {
+        if (i.length >= 5) {
+            const wordArr = i.split('');
+            let newWordArr = [];
+            for (let i of wordArr) {
+                newWordArr.unshift(i);
+            }
+            newArr.push(newWordArr.join(''))
+
+        } else {
+            newArr.push(i)
+        }
+    }
+    return newArr.join(' ')
+}
+
+console.log(spinWords('This is another test'));
