@@ -181,8 +181,8 @@ function XO(string) {
     return totali.length === totalx.length;
 }
 console.log(XO('xo'));
-console.log('__________________________');
-//Problem 23
+
+//Problem 28
 function isIsogram(string) {
     let newString = '';
     for (let i of string) {
@@ -194,4 +194,24 @@ function isIsogram(string) {
     }
     return true;
 }
-console.log(isIsogram('Dermatoglyphics'));
+console.log(isIsogram(''));
+console.log('__________________________');
+//Problem 30
+function duplicateCout(string) {
+    const obj = {};
+    for (let i of string) {
+        if (!obj.hasOwnProperty(i.toLowerCase())) {
+            obj[i.toLowerCase()] = 1;
+        } else {
+            obj[i.toLowerCase()] += 1;
+        }
+    }
+    let multiple = '';
+    for (let prop in obj) {
+        if (obj[prop] >= 2) {
+            multiple += prop;
+        }
+    }
+    return multiple.length
+}
+console.log(duplicateCout('Indivisibilities'));
