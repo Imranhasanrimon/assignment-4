@@ -189,3 +189,14 @@ function isIsogram(string) {
     return true;
 }
 console.log(isIsogram(''));
+//Problem 20
+function findShort(text) {
+    const textArr = text.split(' ');
+    let smallestWord = textArr[0];
+    for (let i of textArr) {
+        if (i.length < smallestWord.length) {
+            smallestWord = i;
+        }
+    }
+    return smallestWord.length;
+}
