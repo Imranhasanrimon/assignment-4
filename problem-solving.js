@@ -167,8 +167,7 @@ function findShort(text) {
     return smallestWord.length;
 }
 console.log(findShort('i want to travel the world writing code one day'));
-console.log('__________________________');
-//Problem 21
+//Problem 22
 function XO(string) {
     let totali = '';
     let totalx = '';
@@ -182,3 +181,17 @@ function XO(string) {
     return totali.length === totalx.length;
 }
 console.log(XO('xo'));
+console.log('__________________________');
+//Problem 23
+function isIsogram(string) {
+    let newString = '';
+    for (let i of string) {
+        if (newString.includes(i.toLowerCase())) {
+            return false;
+        } else {
+            newString += i;
+        }
+    }
+    return true;
+}
+console.log(isIsogram('Dermatoglyphics'));
