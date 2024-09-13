@@ -195,7 +195,7 @@ function isIsogram(string) {
     return true;
 }
 console.log(isIsogram(''));
-console.log('__________________________');
+
 //Problem 30
 function duplicateCout(string) {
     const obj = {};
@@ -215,3 +215,10 @@ function duplicateCout(string) {
     return multiple.length
 }
 console.log(duplicateCout('Indivisibilities'));
+
+console.log('__________________________');
+//Problem 31
+function dupEncode(string) {
+    let encode = '';
+
+}
