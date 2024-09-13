@@ -200,3 +200,22 @@ function findShort(text) {
     }
     return smallestWord.length;
 }
+//Problem 19
+function spinWords(string) {
+    const strArr = string.split(' ');
+    const newArr = [];
+    for (let i of strArr) {
+        if (i.length >= 5) {
+            const wordArr = i.split('');
+            let newWordArr = [];
+            for (let i of wordArr) {
+                newWordArr.unshift(i);
+            }
+            newArr.push(newWordArr.join(''))
+
+        } else {
+            newArr.push(i)
+        }
+    }
+    return newArr.join(' ')
+}
