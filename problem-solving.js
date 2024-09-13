@@ -132,8 +132,6 @@ function highAndLow(stringNum) {
 }
 console.log(highAndLow('0 -214 542'));
 
-console.log('__________________________');
-
 //Problem 19
 function spinWords(string) {
     const strArr = string.split(' ');
@@ -155,3 +153,18 @@ function spinWords(string) {
 }
 
 console.log(spinWords('This is another test'));
+
+console.log('__________________________');
+
+//Problem 20
+function findShort(text) {
+    const textArr = text.split(' ');
+    let smallestWord = textArr[0];
+    for (let i of textArr) {
+        if (i.length < smallestWord.length) {
+            smallestWord = i;
+        }
+    }
+    return smallestWord.length;
+}
+console.log(findShort('i want to travel the world writing code one day'));
