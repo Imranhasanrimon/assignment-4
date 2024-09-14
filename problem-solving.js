@@ -216,9 +216,19 @@ function duplicateCout(string) {
 }
 console.log(duplicateCout('Indivisibilities'));
 
-console.log('__________________________');
 //Problem 31
 function dupEncode(string) {
     let encode = '';
-
+    const lowerString = string.toLowerCase();
+    for (let i of lowerString) {
+        if (lowerString.indexOf(i) !== lowerString.lastIndexOf(i)) {
+            encode += ')';
+        } else {
+            encode += '(';
+        }
+    }
+    return encode;
 }
+console.log(dupEncode('success'));
+console.log('__________________________');
+//Problem 32
