@@ -232,3 +232,13 @@ function dupEncode(string) {
 console.log(dupEncode('success'));
 console.log('__________________________');
 //Problem 32
+function revString(string) {
+    const arrString = string.split('');
+    let result = '';
+    for (let i = arrString.length - 1; i >= 0; i--) {
+        result += arrString[i];
+
+    }
+    return result;
+}
+console.log(revString('world'));
