@@ -201,7 +201,7 @@ function findShort(text) {
     return smallestWord.length;
 }
 //Problem 19
-function spinWords(string) {
+/*function spinWords(string) {
     const strArr = string.split(' ');
     const newArr = [];
     for (let i of strArr) {
@@ -218,4 +218,4 @@ function spinWords(string) {
         }
     }
     return newArr.join(' ')
-}
+}*/
